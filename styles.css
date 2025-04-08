@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.calculator-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+    letter-spacing: 1.5px;
+}
+
+.calculator {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.display {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 25px 20px;
+    text-align: right;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px 16px 0 0;
+}
+
+#previous-operation {
+    font-size: 16px;
+    color: #6c757d;
+    min-height: 18px;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+#current-operation {
+    font-size: 36px;
+    color: #212529;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background-color: #e9ecef;
+    padding: 2px;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-size: 18px;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #f1f3f5;
+    transform: translateY(-1px);
+}
+
+.button:active {
+    background-color: #e9ecef;
+    transform: translateY(1px);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.operator, .equals {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.clear, .delete, .negative {
+    background-color: #f8f9fa;
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.equals {
+    background-color: #0d6efd;
+    color: white;
+    font-weight: 700;
+}
+
+.equals:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.2);
+}
+
+.equals:active {
+    background-color: #0a58ca;
+    box-shadow: none;
+}
+
+/* Media queries para hacer la calculadora responsive */
+@media screen and (max-width: 480px) {
+    .calculator-container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .button {
+        padding: 16px 0;
+        font-size: 16px;
+    }
+    
+    #current-operation {
+        font-size: 30px;
+    }
+    
+    .display {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculator-container {
+        padding: 10px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .button {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+    
+    .display {
+        padding: 15px;
+    }
+    
+    #current-operation {
+        font-size: 24px;
+    }
+}
