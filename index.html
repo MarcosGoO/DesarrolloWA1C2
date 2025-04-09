@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora ACT1C2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1 class="title">Calculadora</h1>
+        <div class="calculator">
+            <div class="display">
+                <div id="previous-operation"></div>
+                <div id="current-operation">0</div>
+            </div>
+            <div class="buttons">
+                <button class="button clear span-2" id="clear">C</button>
+                <button class="button delete" id="delete">DEL</button>
+                <button class="button operator" value="/">/</button>
+                
+                <button class="button number" value="7">7</button>
+                <button class="button number" value="8">8</button>
+                <button class="button number" value="9">9</button>
+                <button class="button operator" value="*">×</button>
+                
+                <button class="button number" value="4">4</button>
+                <button class="button number" value="5">5</button>
+                <button class="button number" value="6">6</button>
+                <button class="button operator" value="-">-</button>
+                
+                <button class="button number" value="1">1</button>
+                <button class="button number" value="2">2</button>
+                <button class="button number" value="3">3</button>
+                <button class="button operator" value="+">+</button>
+                
+                <button class="button number" value="0">0</button>
+                <button class="button decimal" value=".">.</button>
+                <button class="button negative" id="negative">+/-</button>
+                <button class="button equals" id="equals">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
